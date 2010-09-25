@@ -22,37 +22,40 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors',0);
-include '../db.php';
 
-$user=$_POST['user'];
-$passwort=md5($_POST['pass']);
-$update ="Update user SET name='$user', password='$passwort'";
-$insert ="Insert INTO user (name, password) Values ('$user', '$passwort')";
-
-
-
-if (
-	isset($_POST['submit']) &&
-	empty($_POST['user']) ||
-	empty($_POST['pass'])
-	)
-{
+if ( isset($_POST['submit']) && (empty($_POST['user']) || empty($_POST['pass']))) {
 	echo 'Bitte tragen sie ihren Benutzernamen und Passwort ein' . '<br />';
-}
 	
-	else if ($db->affected_rows >= 0)
-	{
-		
-	$db->query($update);
-	echo "Datensatz erfolgreich geändert" . '<br />'; 
-	echo '<a href="user_eintrag.html">zur&uuml;ck</a>';
-	}
-	else
-	{
-	$db->query($insert);
-	echo "neuer Datensatz erfolgreich eingetragen" . '<br />'; 
-	echo '<a href="admin.php">zur&uuml;ck</a>';
-}
+} else {
 	
+	include '../db.php';
 
+	$user=$_POST['user'];
+	$passwort=md5($_POST['pass']);
+	$update ="UPDATE user SET name='$user', password='$passwort'";
+	$insert ="INSERT INTO user (name, password) Values ('$user', '$passwort')";
+	
+	$userQuery = "SELECT * FROM user WHERE name='$user'";
+	
+	$result = $db->query($userQuery);
+	
+	if ($result->num_rows() == 1) {
+		$db->query($update);
+		if ($db->affected_rows == 1) {
+			echo "Datensatz erfolgreich geändert" . '<br />'; 
+			echo '<a href="user_eintrag.html">zur&uuml;ck</a>';
+		} else {
+			print 'FEHLER';
+		}
+	} else {
+		$db->query($insert);
+		if ($db->affected_rows == 1) {
+			echo "neuer Datensatz erfolgreich eingetragen" . '<br />'; 
+			echo '<a href="admin.php">zur&uuml;ck</a>';
+		} else {
+			print 'Fehler';
+		}
+	}
+	
+}
 ?>
