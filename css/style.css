@@ -41,10 +41,9 @@ h1 {
 
 #footer {
 	position:absolute;
-	bottom: 0;
-	margin-bottom:30px;
-	margin-left:10px;
-	margin-top:113px;
+	bottom: 20px;
+	left: 20px;
+	line-height: 30px;
 	text-align: left;
 }
 
