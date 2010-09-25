@@ -1,9 +1,9 @@
 @CHARSET "UTF-8";
 
 html,body {
-margin:0px;
-padding:0px;
-height:100%;
+margin: 0px;
+padding: 0px;
+height: 100%;
 font: 10px/normal Tahoma, Arial, Helvetica, sans-serif;
 }
 
@@ -29,13 +29,6 @@ h1 {
 
 #flash {
 	float:left;
-	}
-
-#navi {
-	position:absolute;
- 	left:65%;
- 	bottom:0;
- 	margin-bottom:30px;
 }
 
 
