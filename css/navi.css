@@ -8,7 +8,6 @@
 }
 
 #navi ul.dropdown {
-	display: block;
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -16,60 +15,97 @@
 
 #navi ul.dropdown li {
 	float: left;
+	border-right: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
 	list-style-type: none;
 	list-style-position: outside;
 	list-style-image: none;
 }
 
 #navi ul.dropdown li a {
-	padding: 10px 5px;
+	display: block;
+	font-weight: normal;
+	line-height: 30px;
+	padding: 0 30px;
+	position: relative;
 }
 
 #navi ul.dropdown li:hover,
 #navi ul.dropdown li:focus {
-	position: relative;
+	
 }
 
 #navi ul.dropdown li ul {
 	display: none;
-	position: absolute;
-	bottom: 20px;
-	left: -50px;
 }
 
 #navi ul.dropdown li:hover ul,
 #navi ul.dropdown li:focus ul {
 	display: block;
+	position: absolute;
+	bottom: 30px;
+	//left: 186px;
+	border: #d9d9d9 1px solid;
+	padding: 0;
+	margin: 0 0 0 -1px;
 }
 
-#navi ul.dropdown li ul li {
+#navi ul.dropdown li:hover ul li,
+#navi ul.dropdown li:focus ul li {
+	text-align: left;
+	border: 0;
+	padding: 0;
+	float: none;
+	background: #f7f7f7 none repeat scroll 0 0;
+	border-top: #d9d9d9 1px solid;
+}
+
+#navi ul.dropdown li:hover ul li:first-child,
+#navi ul.dropdown li:focus ul li:first-child {
+	border-top: 0;
+}
+
+#navi ul.dropdown li:hover ul li:hover,
+#navi ul.dropdown li:focus ul li:focus {
+	background: transparent url('../layout/images/grad2.png') repeat-x scroll 0 0;
+}
+
+#navi ul.dropdown li:hover ul li a,
+#navi ul.dropdown li:focus ul li a:visited {
+	padding: 0 0 0 20px;
+	min-width: 120px;
+	display: block;
+}
+
+#navi ul.dropdown li:hover ul li a:active,
+#navi ul.dropdown li:focus ul li a:hover,
+#navi ul.dropdown li:focus ul li a:focus {
 	
 }
 
 #navi ul.dropdown {
-	background: transparent url('../layout/images/grad1.png') repeat-x scroll 0 0;
+	background: #f7f7f7 none repeat scroll 0 0;
 }
 
 #navi ul.dropdown li {
-	background: transparent url('../layout/images/grad2.png') repeat-x scroll 0 0;
+	height: 100%;
 }
 
 
 #navi ul.dropdown li:hover,
 #navi ul.dropdown li:focus {
-	
+	background: transparent url('../layout/images/grad2.png') repeat-x scroll 0 0;
 }
 
 #navi ul.dropdown li a,
 #navi ul.dropdown li a:visited {
 	color: #393939;
 	text-decoration: none;
-	font-size: 14px;
 }
 
 #navi ul.dropdown li a:focus,
 #navi ul.dropdown li a:hover,
 #navi ul.dropdown li a:active {
-	color: #c0c0c0;
+	color: #393939;
 	text-decoration: none;
 }
