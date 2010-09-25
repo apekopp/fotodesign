@@ -19,7 +19,7 @@ ul.dropdown li:hover {
 
 ul.dropdown ul {
  position: absolute;
- left: -0px;
+ left: 999px;
 }
 
 ul.dropdown ul li {
