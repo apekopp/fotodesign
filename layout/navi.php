@@ -1,8 +1,8 @@
 <div id="navi">
 	<ul class="dropdown dropdown-upward">
 		<li><a href="./">Home</a></li>
-		<li><span>K2OP</span></li>
-		<li><span>Galerie</span>
+		<li><a href="#">K2OP</a></li>
+		<li><a href="#" class="has-child">Galerie</a>
 			<ul>
 				<li><a href="./">Portrait</a></li>
 				<li><a href="./">Hochzeiten</a></li>
@@ -11,8 +11,7 @@
 				<li><a href="./">Architektur</a></li>
 			</ul>
 		</li>
-		<li><span><a href="./kontakt.php">Kontakt</a></span>
-		</li>
+		<li><a href="./kontakt.php">Kontakt</a></li>
 		<li><a href="./">Impressum</a></li>
 	</ul>
 </div>
