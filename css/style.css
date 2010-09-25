@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+
+html,body {
+margin:0px;
+padding:0px;
+height:100%;
+font: 10px/normal Tahoma, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	display:inline;
+	font-weight: normal;
+ 	font-size: 2em;
+ 	text-indent: 5px;
+ 	letter-spacing: -1px;
+	}
+
+#wrapper {
+	position:relative;
+	width:100%;
+	min-height: 100%;
+	margin: 0 auto;
+	}
+
+#header {
+	height:80px;
+	background: #fff url(../layout/images/pattern1.png) 0 0 repeat-x;
+}
+
+#flash {
+	float:left;
+	}
+
+#navi {
+	position:absolute;
+ 	left:65%;
+ 	bottom:0;
+ 	margin-bottom:30px;
+}
+
+
+#content {
+	height:100%;
+	margin-left:550px;
+	margin-right:20px;
+	border:1px solid grey;
+}
+
+#footer {
+	position:absolute;
+	bottom: 0;
+	margin-bottom:30px;
+	margin-left:10px;
+	margin-top:113px;
+	text-align: left;
+}
+
