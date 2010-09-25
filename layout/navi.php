@@ -16,4 +16,3 @@
 		<li><a href="./">Impressum</a></li>
 	</ul>
 </div>
-
