@@ -21,7 +21,7 @@
 
 <?php
 error_reporting(E_ALL);
-ini_set('display_errors',0);
+ini_set('display_errors',1);
 
 if ( isset($_POST['submit']) && (empty($_POST['user']) || empty($_POST['pass']))) {
 	echo 'Bitte tragen sie ihren Benutzernamen und Passwort ein' . '<br />';
@@ -38,8 +38,7 @@ if ( isset($_POST['submit']) && (empty($_POST['user']) || empty($_POST['pass']))
 	$userQuery = "SELECT * FROM user WHERE name='$user'";
 	
 	$result = $db->query($userQuery);
-	
-	if ($result->num_rows() == 1) {
+	if ($result->num_rows == 1) {
 		$db->query($update);
 		if ($db->affected_rows == 1) {
 			echo "Datensatz erfolgreich geändert" . '<br />'; 
